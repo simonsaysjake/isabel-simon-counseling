@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Faith Estimate | Isabel Simon Counseling</title>
+<meta name="description" content="Your right to a Good Faith Estimate under the No Surprises Act. Isabel Simon Counseling, South Bay psychotherapy.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;1,6..12,300;1,6..12,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --sage: #8B9E7C;
+  --sage-light: #a8b89c;
+  --sage-pale: #c5d1bc;
+  --sage-whisper: #dde5d7;
+  --cream: #F5F0E8;
+  --cream-dark: #ebe4d8;
+  --terracotta: #C4745A;
+  --terracotta-light: #d4917b;
+  --terracotta-dark: #a8604a;
+  --forest: #2D3A2E;
+  --forest-light: #3d4e3f;
+  --white: #FDFCFA;
+  --text: #3a3a36;
+  --text-light: #6b6b63;
+  --text-lighter: #9a9a90;
+
+  --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --nav-height: 76px;
+  --container-width: 820px;
+  --container-padding: clamp(20px, 5vw, 40px);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text);
+  background-color: var(--cream);
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--terracotta); text-decoration: none; transition: color 0.3s ease; }
+a:hover { color: var(--terracotta-dark); }
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--forest);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Navigation */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  background-color: rgba(245, 240, 232, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 30px rgba(45, 58, 46, 0.07);
+}
+
+.nav .container {
+  max-width: 1180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--forest);
+  letter-spacing: 0.01em;
+}
+
+.nav-logo-text span { color: var(--terracotta); }
+
+.nav-back {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--forest);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+.nav-back:hover { color: var(--terracotta); }
+.nav-back svg { width: 16px; height: 16px; }
+
+/* Page Header */
+.page-header {
+  padding: 80px 0 48px;
+  text-align: center;
+}
+
+.page-header-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 14px;
+}
+
+.page-header h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.page-header h1 em {
+  font-style: italic;
+  color: var(--sage);
+}
+
+.page-header-subtitle {
+  font-size: 1rem;
+  color: var(--text-light);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Content Card */
+.content-card {
+  background-color: var(--white);
+  border-radius: 24px;
+  padding: clamp(32px, 5vw, 56px);
+  box-shadow: 0 6px 40px rgba(45, 58, 46, 0.04);
+  margin-bottom: 32px;
+}
+
+.content-card h2 {
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 500;
+  margin-bottom: 18px;
+  line-height: 1.25;
+}
+
+.content-card h2 em {
+  font-style: italic;
+  color: var(--sage);
+}
+
+.content-card p {
+  color: var(--text-light);
+  font-size: 0.96rem;
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.content-card p:last-child {
+  margin-bottom: 0;
+}
+
+.content-card ul {
+  color: var(--text-light);
+  font-size: 0.96rem;
+  line-height: 1.85;
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.content-card ul li {
+  margin-bottom: 8px;
+}
+
+.content-card ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background-color: var(--cream);
+  border-left: 3px solid var(--sage);
+  border-radius: 0 16px 16px 0;
+  padding: 24px 28px;
+  margin: 24px 0;
+}
+
+.highlight-box p {
+  color: var(--forest);
+  font-size: 0.94rem;
+  margin-bottom: 0;
+}
+
+.highlight-box strong {
+  color: var(--forest);
+  font-weight: 600;
+}
+
+/* Dispute Notice */
+.dispute-box {
+  background-color: rgba(196, 116, 90, 0.06);
+  border-left: 3px solid var(--terracotta);
+  border-radius: 0 16px 16px 0;
+  padding: 24px 28px;
+  margin: 24px 0;
+}
+
+.dispute-box p {
+  color: var(--forest);
+  font-size: 0.94rem;
+  margin-bottom: 8px;
+}
+
+.dispute-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Provider Info Card */
+.provider-card {
+  background-color: var(--white);
+  border-radius: 24px;
+  padding: clamp(28px, 5vw, 44px);
+  box-shadow: 0 6px 40px rgba(45, 58, 46, 0.04);
+  margin-bottom: 32px;
+}
+
+.provider-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.provider-detail {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.provider-detail:last-child {
+  margin-bottom: 0;
+}
+
+.provider-detail-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sage);
+}
+
+.provider-detail-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.provider-detail-label {
+  font-size: 0.72rem;
+  color: var(--text-lighter);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.provider-detail-value {
+  font-size: 0.92rem;
+  color: var(--forest);
+  font-weight: 500;
+}
+
+/* Back to Home link */
+.back-home {
+  text-align: center;
+  padding: 20px 0 80px;
+}
+
+.back-home a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--forest);
+  background-color: var(--white);
+  padding: 14px 32px;
+  border-radius: 100px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 16px rgba(45, 58, 46, 0.06);
+}
+
+.back-home a:hover {
+  background-color: var(--terracotta);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(196, 116, 90, 0.2);
+}
+
+.back-home a svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--forest);
+  color: rgba(245, 240, 232, 0.55);
+  padding: 36px 0;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.8rem;
+}
+
+.footer .supervisor {
+  margin-top: 10px;
+  font-size: 0.74rem;
+  opacity: 0.55;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root { --nav-height: 64px; }
+
+  .page-header { padding: 60px 0 36px; }
+
+  .content-card { padding: 28px 22px; }
+
+  .provider-card { padding: 24px 20px; }
+
+  .highlight-box,
+  .dispute-box { padding: 20px 22px; }
+}
+
+@media (max-width: 480px) {
+  .page-header { padding: 48px 0 28px; }
+
+  .nav-logo-text { font-size: 1.05rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Isabel Simon Counseling" class="nav-logo-img">
+      <span class="nav-logo-text">Isabel Simon<span>.</span></span>
+    </a>
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Back to Home
+    </a>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<div class="page-header container">
+  <span class="page-header-eyebrow">Your Rights</span>
+  <h1>Good Faith <em>Estimate</em></h1>
+  <p class="page-header-subtitle">Under the No Surprises Act, you have the right to receive a Good Faith Estimate explaining the expected cost of your care.</p>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+
+  <!-- No Surprises Act Overview -->
+  <div class="content-card">
+    <h2>The No Surprises <em>Act</em></h2>
+    <p>Effective January 1, 2022, a federal law known as the <strong>No Surprises Act</strong> requires healthcare providers to give patients who do not have insurance, or who choose not to use their insurance, a <strong>Good Faith Estimate</strong> of expected charges for medical services, including psychotherapy.</p>
+    <p>This law was enacted to protect patients from unexpected medical bills and to promote price transparency in healthcare.</p>
+  </div>
+
+  <!-- Your Right to an Estimate -->
+  <div class="content-card">
+    <h2>Your Right to <em>an Estimate</em></h2>
+    <p>If you are uninsured or are choosing not to use your insurance (self-pay), you have the right to receive a Good Faith Estimate for the total expected cost of any non-emergency healthcare services, including psychotherapy sessions.</p>
+
+    <div class="highlight-box">
+      <p><strong>You can request a Good Faith Estimate before you schedule a service, or at any time during your course of treatment.</strong> Upon request, Isabel Simon Counseling will provide you with a written estimate of expected charges for your sessions.</p>
+    </div>
+
+    <p>The Good Faith Estimate will include the expected charges for items and services that are reasonably expected to be provided together, including the cost of individual therapy sessions.</p>
+  </div>
+
+  <!-- Understanding the Estimate -->
+  <div class="content-card">
+    <h2>Understanding <em>Your Estimate</em></h2>
+    <p>A Good Faith Estimate is based on the information known at the time the estimate is created. Please keep in mind:</p>
+    <ul>
+      <li>The Good Faith Estimate is not a contract or guarantee of the final cost of services.</li>
+      <li>Actual charges may differ from the estimate if your treatment plan changes, additional sessions are recommended, or unforeseen clinical needs arise.</li>
+      <li>If your treatment changes, you will receive an updated Good Faith Estimate.</li>
+      <li>The estimate does not include any potential costs for services provided by other providers that may be recommended during the course of treatment.</li>
+    </ul>
+  </div>
+
+  <!-- Dispute Resolution -->
+  <div class="content-card">
+    <h2>Your Right to <em>Dispute a Bill</em></h2>
+    <p>The No Surprises Act gives you important protections if your final bill substantially exceeds your Good Faith Estimate.</p>
+
+    <div class="dispute-box">
+      <p><strong>If you are billed for more than $400 above your Good Faith Estimate, you have the right to dispute the bill.</strong></p>
+      <p>You may contact the U.S. Department of Health and Human Services (HHS) at <a href="tel:1-800-985-3059">1-800-985-3059</a> to initiate the patient-provider dispute resolution process.</p>
+    </div>
+
+    <p>It is recommended that you save a copy of your Good Faith Estimate for your records. If you have questions about your estimate or your bill, please do not hesitate to reach out.</p>
+    <p>For more information about your right to a Good Faith Estimate, or the dispute resolution process, visit <a href="https://www.cms.gov/nosurprises" target="_blank" rel="noopener">CMS.gov/nosurprises</a>.</p>
+  </div>
+
+  <!-- How to Get an Estimate -->
+  <div class="content-card">
+    <h2>How to Get <em>a Good Faith Estimate</em></h2>
+    <p>You can request a Good Faith Estimate at any time. Simply contact the office by phone or email, and an estimate will be provided to you in writing within the timeframes required by law.</p>
+
+    <div class="highlight-box">
+      <p>To request a Good Faith Estimate, or if you have any questions about your estimate or your rights, please contact:</p>
+    </div>
+  </div>
+
+  <!-- Provider Info -->
+  <div class="provider-card">
+    <h3>Provider Information</h3>
+
+    <div class="provider-detail">
+      <div class="provider-detail-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+      <div>
+        <div class="provider-detail-label">Provider</div>
+        <div class="provider-detail-value">Isabel Simon, APCC #15186</div>
+      </div>
+    </div>
+
+    <div class="provider-detail">
+      <div class="provider-detail-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="provider-detail-label">Supervisor</div>
+        <div class="provider-detail-value">Elaine Quintilliani, LMFT #136794</div>
+      </div>
+    </div>
+
+    <div class="provider-detail">
+      <div class="provider-detail-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+      </div>
+      <div>
+        <div class="provider-detail-label">Email</div>
+        <div class="provider-detail-value"><a href="mailto:isabelsimoncounseling@gmail.com">isabelsimoncounseling@gmail.com</a></div>
+      </div>
+    </div>
+
+    <div class="provider-detail">
+      <div class="provider-detail-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="provider-detail-label">Phone</div>
+        <div class="provider-detail-value"><a href="tel:+13233916783">(323) 391-6783</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Home -->
+  <div class="back-home">
+    <a href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Back to Home
+    </a>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Isabel Simon Counseling. All rights reserved.</p>
+    <p class="supervisor">Supervised by Elaine Quintilliani, LMFT #136794</p>
+  </div>
+</footer>
+
+</body>
+</html>
