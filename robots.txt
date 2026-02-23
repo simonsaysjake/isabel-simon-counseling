@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /mockup-a-warm-organic.html
+Disallow: /mockup-b-modern-minimal.html
+Disallow: /mockup-c-bold-editorial.html
+Disallow: /PLAN.md
+
+Sitemap: https://www.isabelsimoncounseling.com/sitemap.xml
