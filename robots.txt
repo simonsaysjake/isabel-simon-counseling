@@ -5,5 +5,7 @@ Disallow: /mockup-a-warm-organic.html
 Disallow: /mockup-b-modern-minimal.html
 Disallow: /mockup-c-bold-editorial.html
 Disallow: /PLAN.md
+Disallow: /seo-guide-for-isabel.html
+Disallow: /seo-audit.html
 
 Sitemap: https://www.isabelsimoncounseling.com/sitemap.xml

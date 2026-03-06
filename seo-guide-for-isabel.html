@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Guide for Isabel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sage: #8B9E7C;
+  --sage-light: #a8b89c;
+  --sage-pale: #c5d1bc;
+  --sage-whisper: #dde5d7;
+  --cream: #F5F0E8;
+  --terracotta: #C4745A;
+  --terracotta-light: #d4917b;
+  --forest: #2D3A2E;
+  --white: #FDFCFA;
+  --text: #3a3a36;
+  --text-light: #6b6b63;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Nunito Sans', -apple-system, sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text);
+  background-color: var(--cream);
+  padding: 40px 20px 80px;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Header */
+.guide-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding-bottom: 36px;
+  border-bottom: 2px solid var(--sage-pale);
+}
+
+.guide-header p.for {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 12px;
+}
+
+.guide-header h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 500;
+  color: var(--forest);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.guide-header h1 em { color: var(--sage); font-style: italic; }
+
+.guide-header .subtitle {
+  font-size: 1rem;
+  color: var(--text-light);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Intro */
+.intro {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 24px rgba(45,58,46,0.04);
+}
+
+.intro h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--forest);
+  margin-bottom: 12px;
+}
+
+.intro p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.intro p:last-child { margin-bottom: 0; }
+
+/* Task Cards */
+.task {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 36px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 24px rgba(45,58,46,0.04);
+  position: relative;
+}
+
+.task-number {
+  position: absolute;
+  top: -14px;
+  left: 28px;
+  background: var(--terracotta);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--forest);
+  margin-bottom: 4px;
+}
+
+.task h2 em { color: var(--sage); font-style: italic; }
+
+.task .priority {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.priority.critical { background: rgba(196,116,90,0.12); color: var(--terracotta); }
+.priority.high { background: rgba(139,158,124,0.15); color: var(--sage); }
+.priority.medium { background: rgba(45,58,46,0.08); color: var(--text-light); }
+
+.task .why {
+  background: var(--cream);
+  border-left: 3px solid var(--sage);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 0.9rem;
+  color: var(--forest);
+}
+
+.task .why strong { font-weight: 600; }
+
+.task p, .task li {
+  color: var(--text-light);
+  font-size: 0.93rem;
+  line-height: 1.8;
+}
+
+.task p { margin-bottom: 12px; }
+
+.task ol, .task ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.task li {
+  margin-bottom: 10px;
+}
+
+.task .step-label {
+  font-weight: 600;
+  color: var(--forest);
+}
+
+.task a {
+  color: var(--terracotta);
+  text-decoration: underline;
+  text-decoration-color: rgba(196,116,90,0.3);
+  text-underline-offset: 3px;
+}
+
+.task a:hover { text-decoration-color: var(--terracotta); }
+
+.task .tip {
+  background: rgba(139,158,124,0.1);
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 0.88rem;
+  color: var(--forest);
+  margin-top: 16px;
+}
+
+.task .tip strong { font-weight: 600; }
+
+.task .screenshot-hint {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+/* Checklist */
+.checklist {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 36px;
+  margin-top: 40px;
+  box-shadow: 0 4px 24px rgba(45,58,46,0.04);
+}
+
+.checklist h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--forest);
+  margin-bottom: 20px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(139,158,124,0.15);
+}
+
+.checklist-item:last-child { border-bottom: none; }
+
+.checklist-box {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--sage-pale);
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checklist-text {
+  font-size: 0.93rem;
+  color: var(--text);
+}
+
+.checklist-text .sub {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+/* Footer note */
+.guide-footer {
+  text-align: center;
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 2px solid var(--sage-pale);
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.guide-footer strong { color: var(--forest); }
+
+/* Print styles */
+@media print {
+  body { background: white; padding: 20px; font-size: 14px; }
+  .task, .intro, .checklist { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+  .task-number { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .priority, .why, .tip { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+@media (max-width: 600px) {
+  .task, .intro, .checklist { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="guide-header">
+  <p class="for">Prepared for Isabel Simon</p>
+  <h1>Getting Found <em>Online</em></h1>
+  <p class="subtitle">Three things you can do to make sure people searching for a therapist in the South Bay actually find you. Each one builds on the last.</p>
+</div>
+
+<!-- ============================================ -->
+
+<div class="intro">
+  <h2>What's already done</h2>
+  <p>Your website is already set up with technical SEO &mdash; structured data that tells Google you're a therapist in the South Bay, optimized images, keyword-rich page titles, and three new landing pages targeting specific searches like "anxiety therapy south bay" and "telehealth counseling california."</p>
+  <p>What's below is the <strong>off-site</strong> work &mdash; things that happen outside your website that tell Google (and potential clients) you're real, credible, and worth showing in search results. This is where you come in.</p>
+</div>
+
+<!-- ============================================ -->
+
+<div class="task">
+  <div class="task-number">1</div>
+  <h2>Claim Your Google Business <em>Profile</em></h2>
+  <span class="priority critical">Highest Impact</span>
+
+  <div class="why">
+    <strong>Why this matters:</strong> When someone Googles "therapist near me" or "counseling south bay," Google shows a map with local businesses first &mdash; before any website. Without a Google Business Profile, you're invisible in that map. This is the single most important thing you can do for local SEO.
+  </div>
+
+  <p>Here's how to set it up:</p>
+  <ol>
+    <li><span class="step-label">Go to Google Business Profile:</span> Visit <a href="https://business.google.com" target="_blank" rel="noopener">business.google.com</a> and sign in with your Google account (your isabelsimoncounseling@gmail.com works perfectly).</li>
+    <li><span class="step-label">Search for your business:</span> Type "Isabel Simon Counseling" &mdash; if it already exists as an unclaimed listing, claim it. If not, click "Add your business."</li>
+    <li><span class="step-label">Choose your category:</span> Select <strong>"Counselor"</strong> as the primary category. You can also add "Mental Health Service" and "Psychotherapist" as additional categories.</li>
+    <li><span class="step-label">Set your service area:</span> Since you likely don't want your home address published, choose <strong>"I deliver goods and services to my customers"</strong> and list your service areas: Redondo Beach, Hermosa Beach, Manhattan Beach, Torrance, Palos Verdes, El Segundo, San Pedro.</li>
+    <li><span class="step-label">Add your details:</span>
+      <ul>
+        <li>Phone: (323) 391-6783</li>
+        <li>Website: www.isabelsimoncounseling.com</li>
+        <li>Hours: Monday &ndash; Friday, 9:00 AM &ndash; 6:00 PM (or your actual hours)</li>
+      </ul>
+    </li>
+    <li><span class="step-label">Verify your business:</span> Google will ask you to verify &mdash; usually by postcard, phone, or email. This can take a few days. Complete the verification to make your profile live.</li>
+    <li><span class="step-label">Add a description:</span> Something like: <em>"Isabel Simon is an Associate Professional Clinical Counselor (APCC) in the South Bay specializing in anxiety, depression, life transitions, and adolescent/young adult therapy. In-person and virtual sessions available."</em></li>
+    <li><span class="step-label">Add photos:</span> Upload your headshot (the one on your website) and your logo. Profiles with photos get 42% more requests for directions and 35% more clicks.</li>
+  </ol>
+
+  <div class="tip">
+    <strong>Ongoing:</strong> Once it's set up, try to post an update every few weeks &mdash; even something short like "Now accepting new clients for evening sessions" or sharing a mental health awareness tip. Google rewards active profiles.
+  </div>
+</div>
+
+<!-- ============================================ -->
+
+<div class="task">
+  <div class="task-number">2</div>
+  <h2>Submit Your Site to Google <em>Search Console</em></h2>
+  <span class="priority high">High Impact</span>
+
+  <div class="why">
+    <strong>Why this matters:</strong> Google Search Console tells Google your website exists and gives it a map of all your pages (your sitemap). Without it, Google might take weeks or months to discover your new pages on its own. With it, your pages can show up in search within days.
+  </div>
+
+  <ol>
+    <li><span class="step-label">Go to Search Console:</span> Visit <a href="https://search.google.com/search-console" target="_blank" rel="noopener">search.google.com/search-console</a> and sign in with your Google account.</li>
+    <li><span class="step-label">Add your property:</span> Click "Add Property" and choose <strong>"URL prefix"</strong>. Enter: <code>https://www.isabelsimoncounseling.com</code></li>
+    <li><span class="step-label">Verify ownership:</span> The easiest method is <strong>"HTML tag"</strong> &mdash; Google will give you a meta tag to add to your site. Send it to Jake and he'll add it in 2 minutes. Alternatively, if you have access to your domain's DNS settings, you can verify that way too.</li>
+    <li><span class="step-label">Submit your sitemap:</span> Once verified, go to <strong>Sitemaps</strong> in the left sidebar and enter: <code>sitemap.xml</code> then click Submit.</li>
+  </ol>
+
+  <div class="tip">
+    <strong>What you'll get:</strong> After a week or two, Search Console will start showing you which Google searches lead people to your site, how often you appear, and where you rank. This is gold for understanding what's working.
+  </div>
+</div>
+
+<!-- ============================================ -->
+
+<div class="task">
+  <div class="task-number">3</div>
+  <h2>Create Therapist Directory <em>Profiles</em></h2>
+  <span class="priority high">High Impact</span>
+
+  <div class="why">
+    <strong>Why this matters:</strong> Therapist directories rank extremely high on Google &mdash; often above individual therapist websites. A Psychology Today profile alone can be a major source of new clients. These profiles also create <strong>backlinks</strong> to your website, which tells Google your site is trustworthy and boosts your ranking.
+  </div>
+
+  <p>Create profiles on these directories, in order of priority:</p>
+  <ol>
+    <li>
+      <span class="step-label">Psychology Today</span> &mdash; <a href="https://www.psychologytoday.com/us/therapists/signup" target="_blank" rel="noopener">psychologytoday.com/us/therapists/signup</a>
+      <br>This is the #1 therapist directory. It costs ~$30/month but is often the top organic result for "therapist in [city]." Fill out every field &mdash; specialties, approach, insurance, personal statement. Use a warm, first-person writing style (similar to your website). Include your website URL.
+    </li>
+    <li>
+      <span class="step-label">TherapyDen</span> &mdash; <a href="https://www.therapyden.com/for-therapists" target="_blank" rel="noopener">therapyden.com/for-therapists</a>
+      <br>Free to list. More progressive/inclusive positioning. Good for reaching younger clients. Include your specialties and a link to your website.
+    </li>
+    <li>
+      <span class="step-label">GoodTherapy</span> &mdash; <a href="https://www.goodtherapy.org/for-professionals.html" target="_blank" rel="noopener">goodtherapy.org/for-professionals.html</a>
+      <br>Another well-known directory with strong Google rankings. Paid listing (~$30/month) but well-trafficked.
+    </li>
+  </ol>
+
+  <p>For each profile, make sure to include:</p>
+  <ul>
+    <li>Your website URL: <strong>www.isabelsimoncounseling.com</strong></li>
+    <li>Your phone number and email (consistent across all profiles)</li>
+    <li>All your specialties: anxiety, depression, life transitions, adolescents/young adults, eating disorders, self-esteem, stress management</li>
+    <li>Your modalities: CBT, mindfulness, narrative therapy, trauma-informed care, strengths-based</li>
+    <li>Service formats: in-person (South Bay) and telehealth (California-wide)</li>
+    <li>Your license: APCC #15186</li>
+  </ul>
+
+  <div class="tip">
+    <strong>Consistency is key:</strong> Make sure your name, phone number, and address are exactly the same across every profile and your website. Google cross-references these &mdash; inconsistencies hurt your ranking.
+  </div>
+</div>
+
+<!-- ============================================ -->
+
+<div class="checklist">
+  <h2>Quick-Reference Checklist</h2>
+
+  <div class="checklist-item">
+    <div class="checklist-box"></div>
+    <div class="checklist-text">
+      Create Google Business Profile
+      <span class="sub">business.google.com &mdash; use isabelsimoncounseling@gmail.com</span>
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <div class="checklist-box"></div>
+    <div class="checklist-text">
+      Complete Google verification (postcard/phone/email)
+      <span class="sub">This can take a few days &mdash; don't skip it</span>
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <div class="checklist-box"></div>
+    <div class="checklist-text">
+      Add photos + description to Google Business Profile
+      <span class="sub">Headshot, logo, and 2-3 sentence description</span>
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <div class="checklist-box"></div>
+    <div class="checklist-text">
+      Set up Google Search Console
+      <span class="sub">search.google.com/search-console &mdash; send Jake the verification tag</span>
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <div class="checklist-box"></div>
+    <div class="checklist-text">
+      Submit sitemap in Search Console
+      <span class="sub">Sitemaps &rarr; enter "sitemap.xml" &rarr; Submit</span>
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <div class="checklist-box"></div>
+    <div class="checklist-text">
+      Create Psychology Today profile
+      <span class="sub">~$30/month &mdash; highest ROI directory for therapists</span>
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <div class="checklist-box"></div>
+    <div class="checklist-text">
+      Create TherapyDen profile
+      <span class="sub">Free &mdash; good for younger clients</span>
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <div class="checklist-box"></div>
+    <div class="checklist-text">
+      Create GoodTherapy profile
+      <span class="sub">~$30/month &mdash; another well-ranked directory</span>
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <div class="checklist-box"></div>
+    <div class="checklist-text">
+      Ask 2-3 people to leave a Google review
+      <span class="sub">Once your Google Business Profile is live &mdash; reviews boost local ranking significantly</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+
+<div class="guide-footer">
+  <p><strong>Questions?</strong> Text or call Jake &mdash; happy to help with any step.<br>
+  Guide prepared March 2026 for isabelsimoncounseling.com</p>
+</div>
+
+</div>
+</body>
+</html>
