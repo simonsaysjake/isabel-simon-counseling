@@ -31,6 +31,9 @@
 <link rel="icon" type="image/png" href="images/logo.png">
 <link rel="apple-touch-icon" href="images/logo.png">
 
+<!-- Preload Hero Image -->
+<link rel="preload" as="image" type="image/webp" href="images/isabel-hero.webp">
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,7 +104,136 @@
     }
   ],
   "priceRange": "$$",
-  "openingHours": "Mo-Fr 09:00-18:00"
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Counseling Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Individual Counseling",
+          "description": "One-on-one therapy sessions for anxiety, depression, life transitions, and more. Available in-person in the South Bay and via telehealth throughout California."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Virtual Therapy / Telehealth",
+          "description": "Online therapy sessions available throughout California for individuals who prefer the convenience of remote counseling."
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Person Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Isabel Simon",
+  "jobTitle": "Associate Professional Clinical Counselor",
+  "description": "Isabel Simon is an Associate Professional Clinical Counselor (APCC #15186) in the South Bay, California, specializing in anxiety, depression, life transitions, and adolescent/young adult therapy.",
+  "url": "https://www.isabelsimoncounseling.com",
+  "telephone": "+1-323-391-6783",
+  "email": "isabelsimoncounseling@gmail.com",
+  "image": "https://www.isabelsimoncounseling.com/images/isabel-hero.jpg",
+  "sameAs": [
+    "https://instagram.com/isabel_simon_counseling"
+  ],
+  "worksFor": {
+    "@type": "MedicalBusiness",
+    "name": "Isabel Simon Counseling"
+  },
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "license",
+    "name": "Associate Professional Clinical Counselor (APCC)",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "California Board of Behavioral Sciences"
+    }
+  },
+  "knowsAbout": [
+    "Cognitive Behavioral Therapy",
+    "Mindfulness-Based Therapy",
+    "Narrative Therapy",
+    "Trauma-Informed Care",
+    "Strengths-Based Therapy",
+    "Anxiety Treatment",
+    "Depression Treatment",
+    "Adolescent Therapy",
+    "Young Adult Counseling",
+    "Life Transitions Counseling"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Redondo Beach",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What should I expect in my first therapy session?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your first session is a chance to get to know each other. Isabel will ask about what brings you to therapy, your background, and your goals. It's a relaxed, judgment-free conversation — think of it as a consultation to see if it feels like a good fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer virtual therapy sessions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Isabel offers telehealth sessions via a secure, HIPAA-compliant video platform. Virtual therapy is available to anyone located in California, so you can attend from the comfort of your own home."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does therapy cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Session rates are discussed during your free 15-minute consultation. Isabel is committed to making therapy accessible and can discuss sliding scale options. You also have the right to a Good Faith Estimate under the No Surprises Act."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Isabel is an out-of-network provider. She can provide superbills (detailed receipts) that you can submit to your insurance company for potential reimbursement. Many PPO plans offer out-of-network benefits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What issues do you specialize in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Isabel specializes in working with adolescents and young adults experiencing anxiety, depression, life transitions, eating disorders, self-esteem challenges, and stress management. She uses evidence-based approaches including CBT, mindfulness, narrative therapy, and trauma-informed care."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is your therapy office located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Isabel's office is located in the South Bay area of Los Angeles, serving Redondo Beach, Hermosa Beach, Manhattan Beach, Palos Verdes, Torrance, El Segundo, San Pedro, and surrounding communities. Virtual sessions are available throughout California."
+      }
+    }
+  ]
 }
 </script>
 
@@ -1430,6 +1562,13 @@ h1, h2, h3, h4, h5 {
   .mindpeel-feature { padding: 28px 22px; }
   .contact-form-wrapper { padding: 28px 20px; }
 }
+/* FAQ Section */
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item[open] summary span:last-child { transform: rotate(45deg); }
+.faq-item summary:hover { color: var(--terracotta) !important; }
+.faq-item p { animation: faqFadeIn 0.3s var(--ease-out-quart); }
+@keyframes faqFadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
 </style>
 </head>
 <body>
@@ -1440,7 +1579,10 @@ h1, h2, h3, h4, h5 {
 <nav class="nav" id="nav">
   <div class="container">
     <a href="#" class="nav-logo">
-      <img src="images/logo.png" alt="Isabel Simon Counseling" class="nav-logo-img">
+      <picture>
+        <source srcset="images/logo.webp" type="image/webp">
+        <img src="images/logo.png" alt="Isabel Simon Counseling" class="nav-logo-img" width="708" height="705">
+      </picture>
       <span class="nav-logo-text">Isabel Simon<span>.</span></span>
     </a>
     <ul class="nav-links">
@@ -1448,6 +1590,7 @@ h1, h2, h3, h4, h5 {
       <li><a href="#approach">Approach</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#resources">Resources</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#contact" class="nav-cta">Book Now</a></li>
     </ul>
@@ -1463,6 +1606,7 @@ h1, h2, h3, h4, h5 {
   <a href="#approach" class="mobile-nav-link">Approach</a>
   <a href="#services" class="mobile-nav-link">Services</a>
   <a href="#resources" class="mobile-nav-link">Resources</a>
+  <a href="#faq" class="mobile-nav-link">FAQ</a>
   <a href="#contact" class="mobile-nav-link">Contact</a>
   <a href="#contact" class="nav-cta-mobile mobile-nav-link">Book a Consultation</a>
 </div>
@@ -1470,6 +1614,7 @@ h1, h2, h3, h4, h5 {
 <!-- ============================================
      Hero Section
      ============================================ -->
+<main>
 <section class="hero" id="hero">
   <div class="hero-bg">
     <div class="hero-bg-shape"></div>
@@ -1483,8 +1628,8 @@ h1, h2, h3, h4, h5 {
       <div class="hero-content">
         <span class="hero-label">South Bay Psychotherapy</span>
         <h1 class="hero-title">Isabel<br><em>Simon</em></h1>
-        <p class="hero-subtitle">In-Person &amp; Virtual Counseling</p>
-        <p class="hero-tagline">Dedicated to your journey of healing, hope &amp; growth. A warm, grounded space where you can feel genuinely seen.</p>
+        <p class="hero-subtitle">In-Person &amp; Virtual Therapy in the South Bay</p>
+        <p class="hero-tagline">Dedicated to your journey of healing, hope &amp; growth. A warm, grounded space for anxiety, depression &amp; life transitions counseling.</p>
         <div class="hero-actions">
           <a href="#contact" class="hero-cta">
             Book a Free Consultation
@@ -1499,7 +1644,10 @@ h1, h2, h3, h4, h5 {
 
       <div class="hero-photo-wrapper">
         <div class="hero-photo-frame">
-          <img src="images/isabel-hero.jpg" alt="Isabel Simon, therapist and counselor in the South Bay" loading="eager">
+          <picture>
+            <source srcset="images/isabel-hero.webp" type="image/webp">
+            <img src="images/isabel-hero.jpg" alt="Isabel Simon, therapist and counselor in the South Bay" width="820" height="615" loading="eager">
+          </picture>
         </div>
         <div class="hero-photo-accent"></div>
         <div class="hero-photo-accent-2"></div>
@@ -1527,10 +1675,16 @@ h1, h2, h3, h4, h5 {
     <div class="about-grid">
       <div class="about-visual reveal">
         <div class="about-image-frame">
-          <img src="images/isabel-about.jpg" alt="Isabel Simon smiling on a park bench" loading="lazy">
+          <picture>
+            <source srcset="images/isabel-about.webp" type="image/webp">
+            <img src="images/isabel-about.jpg" alt="Isabel Simon smiling on a park bench" width="993" height="1325" loading="lazy">
+          </picture>
         </div>
         <div class="about-dog-inset">
-          <img src="images/isabel-dog.jpg" alt="Isabel with her dog" loading="lazy">
+          <picture>
+            <source srcset="images/isabel-dog.webp" type="image/webp">
+            <img src="images/isabel-dog.jpg" alt="Isabel Simon with her dog in the South Bay" width="768" height="1024" loading="lazy">
+          </picture>
         </div>
         <div class="about-accent-dot"></div>
         <svg class="about-accent-leaf" viewBox="0 0 80 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -1765,7 +1919,75 @@ h1, h2, h3, h4, h5 {
   </div>
 </section>
 
-<!-- Wave: White to Cream -->
+<!-- Wave: White to Sage Whisper -->
+<svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,30 C360,80 720,0 1080,50 C1260,70 1380,20 1440,30 L1440,80 L0,80 Z" fill="var(--sage-whisper, #dde5d7)"/>
+</svg>
+
+<!-- ============================================
+     FAQ Section
+     ============================================ -->
+<section class="faq" id="faq" style="background:var(--sage-whisper, #dde5d7);padding:var(--section-padding) 0;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow reveal">Common Questions</span>
+      <h2 class="section-title reveal reveal-delay-1">Frequently asked <em>questions</em></h2>
+      <p class="reveal reveal-delay-2" style="max-width:620px;margin:0 auto;color:var(--text-light);font-size:1.05rem;line-height:1.8;">Starting therapy can feel overwhelming. Here are answers to some of the most common questions about counseling in the South Bay.</p>
+    </div>
+
+    <div class="faq-list" style="max-width:780px;margin:48px auto 0;">
+      <details class="faq-item reveal" style="border-bottom:1px solid var(--sage-pale, #c5d1bc);padding:20px 0;">
+        <summary style="cursor:pointer;font-family:var(--font-heading);font-size:1.25rem;font-weight:500;color:var(--forest);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          What should I expect in my first therapy session?
+          <span style="font-size:1.5rem;color:var(--sage);transition:transform 0.3s;flex-shrink:0;margin-left:16px;">+</span>
+        </summary>
+        <p style="margin-top:14px;color:var(--text-light);line-height:1.8;padding-right:40px;">Your first session is a chance to get to know each other. Isabel will ask about what brings you to therapy, your background, and your goals. It's a relaxed, judgment-free conversation — think of it as a consultation to see if it feels like a good fit.</p>
+      </details>
+
+      <details class="faq-item reveal reveal-delay-1" style="border-bottom:1px solid var(--sage-pale, #c5d1bc);padding:20px 0;">
+        <summary style="cursor:pointer;font-family:var(--font-heading);font-size:1.25rem;font-weight:500;color:var(--forest);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Do you offer virtual therapy sessions in California?
+          <span style="font-size:1.5rem;color:var(--sage);transition:transform 0.3s;flex-shrink:0;margin-left:16px;">+</span>
+        </summary>
+        <p style="margin-top:14px;color:var(--text-light);line-height:1.8;padding-right:40px;">Yes! Isabel offers telehealth sessions via a secure, HIPAA-compliant video platform. Virtual therapy is available to anyone located in California, so you can attend from the comfort of your own home.</p>
+      </details>
+
+      <details class="faq-item reveal reveal-delay-1" style="border-bottom:1px solid var(--sage-pale, #c5d1bc);padding:20px 0;">
+        <summary style="cursor:pointer;font-family:var(--font-heading);font-size:1.25rem;font-weight:500;color:var(--forest);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          How much does therapy cost in the South Bay?
+          <span style="font-size:1.5rem;color:var(--sage);transition:transform 0.3s;flex-shrink:0;margin-left:16px;">+</span>
+        </summary>
+        <p style="margin-top:14px;color:var(--text-light);line-height:1.8;padding-right:40px;">Session rates are discussed during your free 15-minute consultation. Isabel is committed to making therapy accessible and can discuss sliding scale options. You also have the right to a <a href="good-faith-estimate.html" style="color:var(--terracotta);">Good Faith Estimate</a> under the No Surprises Act.</p>
+      </details>
+
+      <details class="faq-item reveal reveal-delay-2" style="border-bottom:1px solid var(--sage-pale, #c5d1bc);padding:20px 0;">
+        <summary style="cursor:pointer;font-family:var(--font-heading);font-size:1.25rem;font-weight:500;color:var(--forest);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Do you accept insurance?
+          <span style="font-size:1.5rem;color:var(--sage);transition:transform 0.3s;flex-shrink:0;margin-left:16px;">+</span>
+        </summary>
+        <p style="margin-top:14px;color:var(--text-light);line-height:1.8;padding-right:40px;">Isabel is an out-of-network provider. She can provide superbills (detailed receipts) that you can submit to your insurance company for potential reimbursement. Many PPO plans offer out-of-network benefits.</p>
+      </details>
+
+      <details class="faq-item reveal reveal-delay-2" style="border-bottom:1px solid var(--sage-pale, #c5d1bc);padding:20px 0;">
+        <summary style="cursor:pointer;font-family:var(--font-heading);font-size:1.25rem;font-weight:500;color:var(--forest);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          What issues do you specialize in?
+          <span style="font-size:1.5rem;color:var(--sage);transition:transform 0.3s;flex-shrink:0;margin-left:16px;">+</span>
+        </summary>
+        <p style="margin-top:14px;color:var(--text-light);line-height:1.8;padding-right:40px;">Isabel specializes in working with adolescents and young adults experiencing anxiety, depression, life transitions, eating disorders, self-esteem challenges, and stress management. She uses evidence-based approaches including CBT, mindfulness, narrative therapy, and trauma-informed care.</p>
+      </details>
+
+      <details class="faq-item reveal reveal-delay-2" style="border-bottom:1px solid var(--sage-pale, #c5d1bc);padding:20px 0;">
+        <summary style="cursor:pointer;font-family:var(--font-heading);font-size:1.25rem;font-weight:500;color:var(--forest);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Where is your therapy office located?
+          <span style="font-size:1.5rem;color:var(--sage);transition:transform 0.3s;flex-shrink:0;margin-left:16px;">+</span>
+        </summary>
+        <p style="margin-top:14px;color:var(--text-light);line-height:1.8;padding-right:40px;">Isabel's office is located in the South Bay area of Los Angeles, serving Redondo Beach, Hermosa Beach, Manhattan Beach, Palos Verdes, Torrance, El Segundo, San Pedro, and surrounding communities. Virtual sessions are available throughout California.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Wave: Sage Whisper to Cream -->
 <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M0,30 C360,80 720,0 1080,50 C1260,70 1380,20 1440,30 L1440,80 L0,80 Z" fill="#F5F0E8"/>
 </svg>
@@ -1857,6 +2079,7 @@ h1, h2, h3, h4, h5 {
 <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M0,40 C240,0 480,60 720,30 C960,0 1200,50 1440,30 L1440,80 L0,80 Z" fill="#2D3A2E"/>
 </svg>
+</main>
 
 <!-- ============================================
      Footer
@@ -1866,7 +2089,10 @@ h1, h2, h3, h4, h5 {
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-top">
-          <img src="images/logo.png" alt="Isabel Simon Counseling logo" class="footer-logo">
+          <picture>
+            <source srcset="images/logo.webp" type="image/webp">
+            <img src="images/logo.png" alt="Isabel Simon Counseling logo" class="footer-logo" width="708" height="705">
+          </picture>
           <h3>Isabel Simon Counseling</h3>
         </div>
         <p>Dedicated to helping you navigate life's challenges with compassion, humor, and evidence-based therapeutic care. South Bay, California.</p>
@@ -1878,6 +2104,7 @@ h1, h2, h3, h4, h5 {
           <li><a href="#approach">Approach</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#resources">Resources</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
